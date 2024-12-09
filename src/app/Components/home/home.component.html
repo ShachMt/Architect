@@ -1,0 +1,47 @@
+
+  <div class="home-container">
+    <!-- כותרת וטקסט בראש הדף -->
+    <div class="home-header">
+      <h1>The Architects</h1>
+      <p>
+        Your Company and their professional team creating the vision of building perfection into reality.  
+        Your Company based on architecture combined with science and practical art on the one hand, 
+        and the attractiveness that impact the end users on the other hand.  
+        Fascinating buildings integrating functionality & creativity, static and dynamic are the backbone of the 
+        "geometry in motion" perception - leads to outstanding attractive apartments in relatively low cost.  
+        Realizing the vision expressed by organic cohesive structural creation joining all the internal and external elements.
+      </p>
+    </div>
+    <!-- גלריית התמונות -->
+    <div class="animated-images">
+      <div class="image-wrapper">
+        <a (click)="navigateTo('tourism')" routerLink="/tourism">
+          <div class="image-overlay">
+            <span>Hospitality</span>
+          </div>
+          <img src="assets/Hospitality.png" alt="Image 1">
+        </a>
+      </div>
+      <div class="image-wrapper">
+        <a (click)="navigateTo('residential')" routerLink="/residential">
+          <div class="image-overlay">
+            <span>Residential</span>
+          </div>
+          <img src="assets/residential.jpg" alt="Image 2">
+        </a>
+      </div>
+      <div class="image-wrapper">
+        <a (click)="navigateTo('commercial')" routerLink="/commercial">
+          <div class="image-overlay">
+            <span>Commercial</span>
+          </div>
+          <img src="assets/comercial.jpg" alt="Image 3">
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+
+  
+  
