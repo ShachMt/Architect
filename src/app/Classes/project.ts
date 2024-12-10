@@ -1,8 +1,8 @@
 import { Pictures } from "./Pictures";
 
-export class work {
+export class project {
     constructor(
-        public idProject?: number,
+        public id?: number,
         public idCategory?: Number,
         public nameOfTheProject?: string,
         public location?: string,

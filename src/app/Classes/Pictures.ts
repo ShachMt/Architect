@@ -1,6 +1,7 @@
 export class Pictures{
     constructor(
-    public idCategory:number,
+    public id:number,
+    public idProject:number,
     public file:string
     ){}
     
