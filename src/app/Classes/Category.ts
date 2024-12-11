@@ -1,7 +1,7 @@
-export class categories{
+export class category{
 constructor(
-public id:number,
-public nameC:string
+public id?:number,
+public nameC?:string
 ){}
 
 }

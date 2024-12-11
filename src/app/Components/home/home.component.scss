@@ -5,40 +5,40 @@
     align-items: center;
     padding: 20px;
     background-color: #f8f8f8;
-  }
-  
-  /* כותרת וטקסט בראש הדף */
-  .home-header {
+}
+
+/* כותרת וטקסט בראש הדף */
+.home-header {
     text-align: center;
     margin-bottom: 40px;
     max-width: 800px; /* מגבלת רוחב לטקסט */
     color: #333;
-  }
-  
-  .home-header h1 {
+}
+
+.home-header h1 {
     font-size: 2.5em;
     font-weight: bold;
     color: #c5b520b2;
     margin-bottom: 20px;
-  }
-  
-  .home-header p {
+}
+
+.home-header p {
     font-size: 1.2em;
     line-height: 1.6;
     color: #555;
     text-align: justify; /* טקסט מיושר לשני הצדדים */
-  }
-  
-  /* גלריית התמונות */
-  .animated-images {
+}
+
+/* גלריית התמונות */
+.animated-images {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  
-  /* עיצוב כל תמונה */
-  .image-wrapper {
+}
+
+/* עיצוב כל תמונה */
+.image-wrapper {
     position: relative;
     width: 300px;
     height: 300px;
@@ -48,17 +48,17 @@
     animation: slide-in 1.5s ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
-  }
-  
-  .image-wrapper img {
+}
+
+.image-wrapper img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
-  }
-  
-  /* שכבת הכיתוב מעל התמונה */
-  .image-overlay {
+}
+
+/* שכבת הכיתוב מעל התמונה */
+.image-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,77 +73,96 @@
     font-size: 1.2em;
     text-align: center;
     transition: background-color 0.3s ease;
-  }
-  
-  /* שינוי צבע הכיתוב בעת מעבר עכבר */
-  .image-wrapper:hover .image-overlay {
+}
+
+/* שינוי צבע הכיתוב בעת מעבר עכבר */
+.image-wrapper:hover .image-overlay {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.7);
     pointer-events: auto;
-  }
-  
-  .image-wrapper:hover img {
+}
+
+.image-wrapper:hover img {
     cursor: pointer;
-    // transform: scale(1.1); /* הגדלה קלה של התמונה */
-  }
-  
-  /* אנימציה */
-  @keyframes slide-in {
+    /* transform: scale(1.1); הגדרת אפשרות הגדלה אם תרצה */
+}
+
+/* אנימציה */
+@keyframes slide-in {
     0% {
-      transform: translateX(100%);
-      opacity: 0;
+        transform: translateX(100%);
+        opacity: 0;
     }
     100% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
-  }
-  
-  /* תזמון הנפשה */
-  .image-wrapper:nth-child(1) {
+}
+
+/* תזמון הנפשה */
+.image-wrapper:nth-child(1) {
     animation-delay: 0.3s;
-  }
-  
-  .image-wrapper:nth-child(2) {
+}
+
+.image-wrapper:nth-child(2) {
     animation-delay: 0.6s;
-  }
-  
-  .image-wrapper:nth-child(3) {
+}
+
+.image-wrapper:nth-child(3) {
     animation-delay: 0.9s;
-  }
-  
-  /* רספונסיביות */
-  @media (max-width: 768px) {
+}
+
+/* רספונסיביות */
+@media (max-width: 768px) {
     .home-header h1 {
-      font-size: 2em;
+        font-size: 2em;
     }
-  
+
     .home-header p {
-      font-size: 1em;
+        font-size: 1em;
     }
-  
+
     .image-wrapper {
-      width: calc(50% - 20px); /* מתאים לשתי תמונות בשורה */
-      height: 250px;
+        width: calc(50% - 20px); /* מתאים לשתי תמונות בשורה */
+        height: 250px;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (max-width: 480px) {
     .home-header h1 {
-      font-size: 1.8em;
+        font-size: 1.8em;
     }
-  
+
     .home-header p {
-      font-size: 0.9em;
+        font-size: 0.9em;
     }
-  
+
     .image-wrapper {
-      width: 100%; /* תמונה אחת בשורה */
-      height: 200px;
+        width: 100%; /* תמונה אחת בשורה */
+        height: 200px;
     }
-  
+
     .image-overlay {
-      font-size: 0.9em;
+        font-size: 0.9em;
     }
-  }
-  
+}
+
+/* שיפורים נוספים לסמארטפונים */
+@media (max-width: 360px) {
+    .home-header h1 {
+        font-size: 1.6em; /* כותרת קטנה יותר עבור מכשירים קטנים */
+    }
+
+    .home-header p {
+        font-size: 0.8em; /* טקסט בגודל קטן יותר */
+    }
+
+    .image-wrapper {
+        width: 100%; /* תמונה אחת בשורה */
+        height: 180px; /* גובה קטן יותר */
+    }
+
+    .image-overlay {
+        font-size: 0.8em; /* גודל טקסט קטן יותר */
+    }
+}

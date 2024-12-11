@@ -1,20 +1,20 @@
 /* עיצוב ראש העמוד */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* ממרכז את התוכן אנכית */
+  justify-content: space-between; /* מפריד בין הלוגו לתפריט */
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
@@ -33,7 +33,7 @@
 /* עיצוב התפריט בצד ימין */
 .nav-menu {
   display: flex;
-  align-items: center;
+  align-items: center; /* ממרכז את התפריט אנכית */
   gap: 20px;
 }
 
@@ -59,7 +59,7 @@
   color: #fff;
   cursor: pointer;
   padding: 8px 12px;
-  font-family: Arial, sans-serif; /* פונט אחיד גם לכפתור */
+  font-family: Arial, sans-serif;
   font-size: 16px;
 }
 
@@ -90,11 +90,12 @@
   display: block;
 }
 
-/* רספונסיביות – עבור מסכים קטנים */
+/* רספונסיביות – עבור מסכים עד 768px */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* שומר על סדר הגורמים בשורה אחת */
+    align-items: center; /* ממרכז את התוכן אנכית */
+    justify-content: space-between; /* מפריד בין הלוגו ל-Hamburger */
   }
 
   .nav-menu {
@@ -102,6 +103,11 @@
     gap: 10px;
     width: 100%;
     margin-top: 10px;
+    display: none;
+  }
+
+  .nav-menu.open {
+    display: flex; /* מציג את התפריט כאשר הוא נפתח */
   }
 
   /* הכפתור של ה-dropdown יוצג במצב נגלל */
@@ -117,18 +123,75 @@
   .logo-img {
     width: 60px;
   }
+
+  /* מוסיפים כפתור hamburger להתפריט */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+  }
+  .hamburger.open {
+    position: absolute; /* הבטחה שלא יזוז */
+    top: 10px; /* לשמור על מיקום */
+    right: 20px; /* בצד ימין */
+    margin-top:9%;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 5px;
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 5px;
+  }
 }
 
 /* עבור מסכים מאוד קטנים, למשל בסמארטפונים */
 @media (max-width: 480px) {
   .logo-img {
-    width: 50px;
+    width: 60px;
+    margin: 0 2%;
+  }
+  .hamburger.open {
+    position: absolute; /* הבטחה שלא יזוז */
+    top: 10px; /* לשמור על מיקום */
+    right: 20px; /* בצד ימין */
+    margin-top:9%;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 5px;
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 5px;
   }
 }
+
+/* הגדרת עיצוב התוכן */
 .content {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
   text-align: left;
 }
-

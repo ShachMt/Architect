@@ -1,4 +1,3 @@
-import { Pictures } from "./Pictures";
 
 export class project {
     constructor(
@@ -8,7 +7,7 @@ export class project {
         public location?: string,
         public size?: string,
         public aboutTheProject?: string,
-        public pictures?:Pictures[],
+        
 
     ) { }
     /**
