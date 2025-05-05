@@ -14,6 +14,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { PrivacyPolicyComponent } from './Components/privacy-policy/privacy-policy.component';
 import { TermsOfServiceComponent } from './Components/terms-of-service/terms-of-service.component';
 import { RouterModule } from '@angular/router';
+import { ProjectComponent } from './Components/project/project.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { RouterModule } from '@angular/router';
     FooterComponent,
     PrivacyPolicyComponent,
     TermsOfServiceComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,

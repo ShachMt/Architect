@@ -126,19 +126,20 @@ body {
 
   /* מוסיפים כפתור hamburger להתפריט */
   .hamburger {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1000;
+    position: relative; /* נוודא שהספאנים יהיו ממוקמים יחסית אליו */
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
   }
 
   .hamburger span {
+    position: absolute; /* מיקום אבסולוטי */
     display: block;
-    width: 30px;
+    width: 100%;
     height: 4px;
-    background-color: #fff;
-    margin: 5px 0;
-    transition: 0.3s;
+    background: rgb(250, 250, 250);
+    // transition: transform 0.3s ease, opacity 0.3s ease, top 0.3s ease, bottom 0.3s ease;
+  
   }
   .hamburger.open {
     position: absolute; /* הבטחה שלא יזוז */
@@ -147,17 +148,16 @@ body {
     margin-top:9%;
   }
   .hamburger.open span:nth-child(1) {
-    transform: rotate(-45deg);
-    top: 5px;
+ //   transform: rotate(-45deg);
+    top: 0;
   }
 
   .hamburger.open span:nth-child(2) {
-    opacity: 0;
+    top: 8px;
   }
 
   .hamburger.open span:nth-child(3) {
-    transform: rotate(45deg);
-    bottom: 5px;
+    bottom: 0;
   }
 }
 
@@ -174,17 +174,17 @@ body {
     margin-top:9%;
   }
   .hamburger.open span:nth-child(1) {
-    transform: rotate(-45deg);
-    top: 5px;
+    transform: rotate(-135deg);
+    top: 8px; /* מרכז הספאן הראשון */
   }
-
+  
   .hamburger.open span:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* העלמת הספאן האמצעי */
   }
-
+  
   .hamburger.open span:nth-child(3) {
-    transform: rotate(45deg);
-    bottom: 5px;
+    transform: rotate(135deg);
+    bottom: 8px; /* מרכז הספאן השלישי */
   }
 }
 
