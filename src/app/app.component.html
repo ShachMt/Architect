@@ -1,0 +1,33 @@
+<header class="header">
+  <!-- לוגו בצד שמאל -->
+  <div class="logo">
+    <a routerLink="/">
+      <img src="assets/images/logoArchitect.webp" alt="Logo" class="logo-img" />
+    </a>
+  </div>
+
+  <!-- אייקון Hamburger -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- תפריט ניווט בצד ימין -->
+  <nav class="nav-menu">
+    <div class="dropdown">
+      <button class="dropdown-btn">work</button>
+      <div class="dropdown-content">
+        <a routerLink="/residential">Residential</a>
+        <a routerLink="/commercial">Commercial</a>
+        <a routerLink="/tourism">Tourism & Hospitality</a>
+      </div>
+    </div>
+    <a routerLink="/news" class="nav-link">news</a>
+    <a routerLink="/about" class="nav-link">about</a>
+  </nav>
+</header>
+<main>
+  <router-outlet></router-outlet> 
+</main>
+<app-footer></app-footer>

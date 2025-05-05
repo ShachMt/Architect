@@ -1,0 +1,35 @@
+<app-header [title]="commercial"></app-header>
+<div class="image-gallery">
+    <div class="gallery-item">
+      <a routerLink="/image1-details">
+        <div class="image-container">
+          <img src="assets/images/CityGateAshdod.png" alt="Image 1">
+          <div class="image-overlay">
+            <span>City Gate Ashdod</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a routerLink="/image2-details">
+        <div class="image-container">
+          <img src="assets/images/LoveHillTower.png" alt="Image 2">
+          <div class="image-overlay">
+            <span>Love Hill Tower</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="gallery-item">
+      <a routerLink="/image3-details">
+        <div class="image-container">
+          <img src="assets/images/tuborkComplex.png" alt="Image 3">
+          <div class="image-overlay">
+            <span>Tubork Complex</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  
+<router-outlet></router-outlet>
